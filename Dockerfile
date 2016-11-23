@@ -1,7 +1,7 @@
 FROM nimbix/centos-desktop
 RUN yum -y update
 RUN yum -y groupinstall "Development tools"
-RUN yum -y install gperf
+RUN yum -y install gperf gnuplot
 
 RUN cd ; git clone https://github.com/steveicarus/iverilog.git ; cd iverilog ; git checkout --track -b v10-branch origin/v10-branch ; git pull
 RUN cd ; cd iverilog ; sh autoconf.sh ;./configure ; make ; make install
