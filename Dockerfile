@@ -1,3 +1,3 @@
 FROM nimbix/centos-desktop
-RUN yum update
+RUN yum -y update
 
