@@ -10,4 +10,4 @@ RUN cd ; git clone https://github.com/hgiefers/zcsl.git
 RUN cd ; cd zcsl/sw ; export VPI_USER_H_DIR=/usr/local/include/iverilog ; ./make-dep.sh 
 RUN cd ; cd zcsl ; mkdir sim ; cd sim ; mkdir zcsl
 RUN cd ; cd zcsl/sim/zcsl ; iverilog -o zcsl_isim ../../sw/pslse/afu_driver/verilog/top.v ../../hdl/zcsl/*.v ../../hdl/3rd_party/spiral-dft.v
-
+RUN cd ; cd zcsl/sw/zcsl-fft ; sh ./run.sh
